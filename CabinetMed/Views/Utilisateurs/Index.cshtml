@@ -1,0 +1,57 @@
+﻿@model IEnumerable<CabinetMed.Models.Utilisateur>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_Uti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adr_Uti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_Uti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pass_Uti)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tel_Uti)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom_Uti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adr_Uti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_Uti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pass_Uti)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tel_Uti)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

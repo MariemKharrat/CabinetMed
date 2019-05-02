@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CabinetMed.Models.Patient>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_Pat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adr_Pat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tel_Pat)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom_Pat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adr_Pat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tel_Pat)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

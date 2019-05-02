@@ -1,0 +1,58 @@
+﻿@model CabinetMed.Models.Utilisateur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Utilisateur</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_Uti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_Uti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adr_Uti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adr_Uti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_Uti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_Uti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pass_Uti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pass_Uti)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tel_Uti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tel_Uti)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
